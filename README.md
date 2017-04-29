@@ -5,7 +5,7 @@ Página do projeto: https://sites.google.com/site/mperkusich/disciplinas/padroes
 
 Fachada e Testes de Aceitação a serem seguidos para o desenvolvimento do projeto.
 
-# Responsáveis
+# Moniroes Responsáveis
 Testes de Aceitação: http://github.com/ThallesAraujo
 
 Fachada para os testes: http://github.com/trandreluis
