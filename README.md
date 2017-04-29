@@ -14,3 +14,6 @@ Fachada para os testes: http://github.com/trandreluis
 Link para download: http://sourceforge.net/projects/easyaccept/files/easyaccept/
 
 Link de tutorial com exemplo: http://easyaccept.sourceforge.net/tutorial.html
+
+# Imagem ilustrativa de como tratar as coordenadas
+![alt text](http://www.dicarapida.com/img/fotos/jogos%20de%20dama%202.jpg)
