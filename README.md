@@ -11,5 +11,7 @@ Fachada para os testes: github.com/trandreluis
 
 # Sobre o EasyAccept
 Link para download: http://sourceforge.net/projects/easyaccept/files/easyaccept/
+
 Link de tutorial com exemplo: http://easyaccept.sourceforge.net/tutorial.html
+
 Página do projeto: https://sites.google.com/site/mperkusich/disciplinas/padroes-de-projeto-2017-1-1/projeto-da-disciplina
