@@ -1,0 +1,50 @@
+#User Story 01 - Criar Tabuleiro
+
+#Criacao de tabuleiros com tamanhos validos
+
+zerarJogo
+
+criarTabuleiro tamanho=10
+
+descartarTabuleiro
+
+criarTabuleiro tamanho=6
+
+descartarTabuleiro
+
+criarTabuleiro tamanho=8
+
+descartarTabuleiro
+
+criarTabuleiro tamanho=12
+
+descartarTabuleiro
+
+#Criacao de tabuleiros com tamanhos invalidos
+
+expectError "Tamanho de tabuleiro invalido" criarTabuleiro tamanho=4
+
+expectError "Tamanho de tabuleiro invalido" criarTabuleiro tamanho=15
+
+expectError "Tamanho de tabuleiro invalido" criarTabuleiro tamanho=7
+
+expectError "Tamanho de tabuleiro invalido" criarTabuleiro tamanho=5
+
+#Ultima casa a esquerda de cada jogador deve ser escura
+
+criarTabuleiro tamanho=8
+
+expect "preta" getCorCasa linha="a" coluna=8
+
+expect "preta" getCorCasa linha="h" coluna=1
+
+descartarTabuleiro
+
+criarTabuleiro tamanho=10
+
+expect "preta" getCorCasa linha="j" coluna=1
+
+zerarJogo
+
+quit
+
