@@ -6,6 +6,7 @@ Fachada e Testes de Aceitação a serem seguidos para o desenvolvimento do proje
 
 # Responsáveis
 Testes de Aceitação: github.com/ThallesAraujo
+
 Fachada para os testes: github.com/trandreluis
 
 # Sobre o EasyAccept
