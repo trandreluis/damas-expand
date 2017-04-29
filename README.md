@@ -1,5 +1,5 @@
 # Jogo de Damas
-Projeto da disciplina de Padrões de Projeto, ministrada pelo professor Ms. Mirko Perkusich, no IFPB - Campus Monteiro, durante o período 2016.1
+Projeto da disciplina de Padrões de Projeto, ministrada pelo professor Ms. Mirko Perkusich, no IFPB - Campus Monteiro, durante o período 2017.1
 
 Página do projeto: https://sites.google.com/site/mperkusich/disciplinas/padroes-de-projeto-2017-1-1/projeto-da-disciplina
 
