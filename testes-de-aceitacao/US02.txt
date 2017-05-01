@@ -61,6 +61,6 @@ expect "true" isOcupada linha="h" coluna=8
 
 expect "false" isOcupada linha"h" coluna=7
 
-zerarSistema
+zerarJogo
 
 quit
