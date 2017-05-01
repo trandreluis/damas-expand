@@ -11,6 +11,8 @@
 #regraSopro1 = pode haver sopro (jogador perde a partida, nesse caso)
 #regraSopro2 = jogo nao permite sopro (emite erro)
 
+zerarJogo
+
 criarTabuleiro tamanho=8
 
 iniciarPartida jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro1"

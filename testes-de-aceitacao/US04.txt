@@ -1,0 +1,43 @@
+#User Story - 04: Regras de Captura e Sopro
+
+zerarJogo
+
+criarTabuleiro tamanho=8
+
+#Nao permite sopro
+iniciarPartida jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro2"
+
+movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=2 linhaDestino="d" colunaDestino=3
+
+movimentoJogador numeroJogador=2 linhaOrigem="f" colunaOrigem=5 linhaDestino="e" colunaDestino=6
+
+movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=8 linhaDestino="d" colunaDestino=7
+
+#jogador 2 comete sopro
+expectError "A regra de sopro definida nao permite soprar" movimentoJogador numeroJogador=2 linhaOrigem="f" colunaOrigem=1 linhaDestino="e" colunaDestino=2
+#Continua sendo a vez do jogador 2
+
+movimentoJogador numeroJogador=2 linhaOrigem="e" colunaOrigem=6 linhaDestino="c" colunaDestino=8
+#Depois da linha acima, o jogador 2 capturou uma peca do jogador 1. Ela nao deve mais estar disponivel
+
+expect "false" isOcupada linha="d" coluna=7
+
+movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=4 linhaDestino="d" colunaDestino=5
+
+movimentoJogador numeroJogador=2 linhaOrigem="f" colunaOrigem=7 linhaDestino="e" colunaDestino=6
+
+#jogador 1 comete sopro
+expectError "A regra de sopro definida nao permite soprar" movimentoJogador numeroJogador=1 linhaOrigem="d" colunaOrigem=3 linhaDestino="e" colunaDestino=2
+#Continua sendo a vez do jogador 1
+
+movimentoJogador numeroJogador=1 linhaOrigem="d" colunaOrigem=4 linhaDestino="f" colunaDestino=7
+#Depois da linha acima, o jogador 1 capturou uma peca do jogador 2. Ela nao deve estar mais disponivel
+
+expect "false" isOcupada linha="e" coluna=6
+
+#Testar captura de lado
+#Testar captura de mais de uma peca
+
+
+
+
