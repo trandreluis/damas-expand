@@ -13,8 +13,10 @@ public interface IFacadeJogoDamas {
 	 * @param dimensao
 	 *            Dimensao que o tabuleiro criado terá (Ex: para uma dimensao =
 	 *            6 o tabuleiro terá 6 casas de largura x 6 casas de altura).
-	 * 
-	 * @throws DamasException
+	 *
+	 * @throws DamasException Exceção que pode ser lançada em caso de descomprimento
+	 * 			  das regras pré-estabelicidas para a aplicação
+	 *
 	 */
 	public void criarTabuleiro(int dimensao) throws DamasException;
 
@@ -39,7 +41,9 @@ public interface IFacadeJogoDamas {
 	 *            Coluna de destino para onde a peça irá se movimentar (Ex:
 	 *            colunaDestino = 3)
 	 * 
-	 * @throws DamasException
+	 * @throws DamasException Exceção que pode ser lançada em caso de descomprimento
+	 * 			  das regras pré-estabelicidas para a aplicação
+	 *
 	 */
 	public void movimentoJogador(int numeroJogador, String linhaOrigem, int colunaOrigem, String linhaDestino,
 			int colunaDestino) throws DamasException;
@@ -52,8 +56,10 @@ public interface IFacadeJogoDamas {
 	 *            Letra que representa a linha do tabuleiro (Ex: B)
 	 * @param coluna
 	 *            Número que representa a coluna do tabuleiro
-	 * 
-	 * @throws DamasException
+	 *
+	 * @throws DamasException Exceção que pode ser lançada em caso de descomprimento
+	 * 			  das regras pré-estabelicidas para a aplicação
+	 *
 	 */
 	public void isOcupada(String linha, int coluna) throws DamasException;
 
@@ -63,7 +69,9 @@ public interface IFacadeJogoDamas {
 	 * @param idTabuleiro
 	 *            Identificador do tabuleiro (Ex: TAB-01)
 	 * 
-	 * @throws DamasException
+	 * @throws DamasException Exceção que pode ser lançada em caso de descomprimento
+	 * 			  das regras pré-estabelicidas para a aplicação
+	 *
 	 */
 	public int getDimensaoTabuleiro(String idTabuleiro) throws DamasException;
 
