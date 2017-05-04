@@ -42,6 +42,8 @@ descartarTabuleiro
 
 criarTabuleiro tamanho=10
 
+expect "preta" getCorCasa linha="a" coluna=10
+
 expect "preta" getCorCasa linha="j" coluna=1
 
 zerarJogo

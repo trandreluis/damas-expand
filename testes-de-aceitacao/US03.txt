@@ -6,7 +6,7 @@ zerarJogo
 
 criarTabuleiro tamanho=8
 
-iniciarPartida jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro1"
+iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro1"
 
 movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=2 linhaDestino="d" colunaDestino=3
 
@@ -30,7 +30,7 @@ encerrarPartidaSemSalvar
 
 criarTabuleiro tamanho=8
 
-iniciarPartida jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro1"
+iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro1"
 
 expectError "Voce nao pode se mover por mais de uma casa vazia" movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=4 linhaDestino="f" colunaDestino=6
 

@@ -15,12 +15,12 @@ zerarJogo
 
 criarTabuleiro tamanho=8
 
-iniciarPartida jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro1"
+iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro1"
 
 #este metodo encerra a partida sem salvar a instancia (equivalente a sair do jogo, exibir o dialogo de salvamento e o jogador selecionar nao)
 encerrarPartidaSemSalvar
 
-iniciarPartida jogador1="Marcelo" jogador2="Augusto Cesar" quemComeca=2 regraMovimento="regraMovimento2" regraSopro="regraSopro1"
+iniciarPartida id="p01" jogador1="Marcelo" jogador2="Augusto Cesar" quemComeca=2 regraMovimento="regraMovimento2" regraSopro="regraSopro1"
 
 encerrarPartidaSemSalvar
 
@@ -62,6 +62,8 @@ expect "false" isOcupada linha="a" coluna=2
 expect "true" isOcupada linha="h" coluna=8
 
 expect "false" isOcupada linha"h" coluna=7
+
+encerrarPartidaSemSalvar
 
 zerarJogo
 
