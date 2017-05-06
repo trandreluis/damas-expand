@@ -35,17 +35,19 @@ movimentoJogador numeroJogador=1 linhaOrigem="d" colunaOrigem=5 linhaDestino="f"
 
 expect "false" isOcupada linha="e" coluna=6
 
-#captura de lado Deve-se testar as casas adjacentes a uma peca para a captura, ou seja,
-#para quais casas ele pode se mover capturando a peca do adversario (jogada em zig-zag)
-movimentoJogador numeroJogador=2 linhaOrigem="g" colunaOrigem=6 linhaDestino="e" colunaDestino=6 
+#mais uma captura
+movimentoJogador numeroJogador=2 linhaOrigem="g" colunaOrigem=6 linhaDestino="e" colunaDestino=8
 
-#mais uma captura de lado:
+expect "false" isOcupada linha="f" coluna=7
 
-movimentoJogador numeroJogador=1 linhaOrigem="b" colunaOrigem=7 linhaDestino="d" colunaDestino=7
+movimentoJogador numeroJogador=1 linhaOrigem="b" colunaOrigem=3 linhaDestino="c" colunaDestino=4
 
-movimentoJogador numeroJogador=2 linhaOrigem="e" colunaOrigem=6 linhaDestino"c" colunaDestino=8
+movimentoJogador numeroJogador=2 linhaOrigem="f" colunaOrigem=1 linhaDestino"e" colunaDestino=2
 
-movimentoJogador numeroJogador=1 linhaOrigem"b" colunaOrigem=3 linhaDestino"c" colunaDestino=4
+#mais uma captura
+movimentoJogador numeroJogador=1 linhaOrigem"e" colunaOrigem=3 linhaDestino"g" colunaDestino=1
+
+expect "false" isOcupada linha="f" coluna=2
 
 encerrarPartidaSemSalvar
 
@@ -53,17 +55,38 @@ iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovi
 
 movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=4 linhaDestino="d" colunaDestino=5
 
+movimentoJogador numeroJogador=2 linhaOrigem="f" colunaOrigem=3 linhaDestino"e" colunaDestino=2
+
+movimentoJogador numeroJogador=1 linhaOrigem="b" colunaOrigem=3 linhaDestino="c" colunaDestino=4
+
+movimentoJogador numeroJogador=2 linhaOrigem="g" colunaOrigem=4 linhaDestino="f" colunaDestino=3
+
+movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=6 linhaDestino="d" colunaDestino=7
+
+movimentoJogador numeroJogador=2 linhaOrigem="e" colunaOrigem=2 linhaDestino="d" colunaDestino=3
+
+#Nesse momento, o jogador 1 (pedras brancas) pode comer duas pecas do jogador 2. Ele deve realizar duas jogadas seguidas.
+#Podem tambem haver situacoes onde tres, quatro, e mais pedras podem ser comidas em uma unica jogada.
+movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=4 linhaDestino="e" colunaDestino=2
+
+movimentoJogador numeroJogador=1 linhaOrigem="e" colunaOrigem=2 linhaDestino="g" colunaDestino=4
+
+movimentoJogador numeroJogador=2 linhaOrigem="h" colunaOrigem=5 linhaDestino="f" colunaDestino=3
+
+movimentoJogador numeroJogador=1 linhaOrigem="b" colunaOrigem=5 linhaDestino="c" colunaDestino=4
+
 movimentoJogador numeroJogador=2 linhaOrigem="f" colunaOrigem=3 linhaDestino="e" colunaDestino=2
 
-movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=2 linhaDestino="d" colunaDestino=3
+movimentoJogador numeroJogador=1 linhaOrigem="a" colunaOrigem=6 linhaDestino="b" colunaDestino=5
 
-#Captura de mais de uma peca. Deve-se testar se e possivel capturar mais
-#de uma peca. Neste caso, o jogador pode executar dois ou mais movimentos
+movimentoJogador numeroJogador=2 linhaOrigem="g" colunaOrigem=2 linhaDestino="f" colunaDestino=3
 
+movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=4 linhaDestino="d" colunaDestino=3
+
+#Agora, a situacao se inverte: o jogador 2 (pecas pretas) pode comer duas pecas do jogador 1. Ele deve realizar duas jogadas seguidas.
 movimentoJogador numeroJogador=2 linhaOrigem="e" colunaOrigem=2 linhaDestino="c" colunaDestino=4
 
-movimentoJogador numeroJogador=2 linhaOrigem="c" colunaOrigem=4 linhaDestino="e" colunaDestino=6
-#O jogador 2 capturou duas pecas do jogador 1
+movimentoJogador numeroJogador=2 linhaOrigem="c" colunaOrigem=4 linhaDestino="a" colunaDestino=6
 
 encerrarPartidaSemSalvar
 

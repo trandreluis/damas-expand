@@ -1,0 +1,75 @@
+#User Story 05 - Salvar e continuar jogo
+
+zerarJogo
+
+criarTabuleiro tamanho=8
+
+iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro2"
+
+movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=2 linhaDestino="d" colunaDestino=3
+
+movimentoJogador numeroJogador=2 linhaOrigem="f" colunaOrigem=5 linhaDestino="e" colunaDestino=6
+
+finalizarESalvarJogo
+
+continuarPartida id="p01"
+
+expect "true" isOcupada linha="d" coluna=3
+
+expect "true" isOcupada linha="e" coluna=6
+
+expect "false" isOcupada linha="c" coluna=2
+
+expect "false" isOcupada linha="f" coluna=5
+
+movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=8 linhaDestino="d" colunaDestino=7
+
+movimentoJogador numeroJogador=2 linhaOrigem="e" colunaOrigem=6 linhaDestino="c" colunaDestino=8
+
+movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=4 linhaDestino="d" colunaDestino=5
+
+finalizarESalvarJogo
+
+continuarPartida id="p01"
+
+expect "true" isOcupada linha="c" coluna=8
+
+expect "true" isOcupada linha="d" coluna=5
+
+expect "false" isOcupada linha="e" coluna=6
+
+expect "false" isOcupada linha="c" coluna=4
+
+finalizarESalvarJogo
+
+criarTabuleiro tamanho=8
+
+expectError "Ja existe uma partida salva com essa identificacao" iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro2"
+
+iniciarPartida id="p02" jogador1="Arthur" jogador2="Juliana" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro2"
+
+movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=6 linhaDestino="d" colunaDestino=7
+
+movimentoJogador numeroJogador=2 linhaOrigem="f" colunaOrigem=1 linhaDestino="e" colunaDestino=2
+
+finalizarESalvarJogo
+
+continuarPartida id="p02"
+
+expect "true" isOcupada linha="e" coluna=2
+
+expect "true" isOcupada linha="d" coluna=7
+
+expect "false" isOcupada linha="f" coluna=1
+
+expect "false" isOcupada linha="c" coluna=6
+
+finalizarESalvarJogo
+
+descartarPartida id="p02"
+
+expectError "Nao existe partida com essa identificacao" continuarPartida id="p02"
+
+zerarJogo
+
+quit
