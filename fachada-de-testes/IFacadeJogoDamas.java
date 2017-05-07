@@ -8,6 +8,16 @@ public interface IFacadeJogoDamas {
 	public void zerarJogo();
 
 	/**
+	 * Insere uma peça no tabuleiro a partir da posição passada
+	 * 
+	 * param cor
+	 *		  Devem existir apenas duas possibilidades de cores
+	 *		  (representadas pelos numeros inteiros 1 e 2)
+	 *		  que representam respectivamente as cores branca e preta.
+	 */
+	public void posicionarPeca(int cor, String linha, int coluna) throws DamasException;
+	
+	/**
 	 * Criar tabuleiro
 	 *
 	 * @param dimensao
