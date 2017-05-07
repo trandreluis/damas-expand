@@ -1,0 +1,85 @@
+#User Story 07 - Finalizacao de partida
+
+zerarJogo
+
+criarTabuleiro tamanho=8
+
+iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
+
+ativarPosicionamentoManual
+
+posicionarPeca cor=2 linha="f" coluna=5
+
+posicionarPeca cor=1 linha="e" coluna=4
+
+setVez jogador=1
+
+#Jogador 1 vence
+movimentoJogador numeroJogador=1 linhaOrigem="e" colunaOrigem=4 linhaDestino="g" colunaDestino=6
+
+expect "Pedro" getVencedorPartida id="p01"
+
+criarTabuleiro tamanho=8
+
+iniciarPartida id="p02" jogador1="Christina" jogador2="Samara" regraMovimento="regraMovimento1" sopro="false"
+
+ativarPosicionamentoManual
+
+posicionarPeca cor=2 linha="c" coluna=4
+
+posicionarPeca cor=1 linha="b" coluna=5
+
+setVez jogador=2
+
+#Jogador 2 vence
+movimentoJogador numeroJogador=2 linhaOrigem="c" colunaOrigem=4 linhaDestino="a" colunaDestino=6
+
+expect "Samara" getVencedorPartida id="p02"
+
+#Jogador come as duas unicas pecas do adversario
+
+criarTabuleiro tamanho=8
+
+iniciarPartida id="p03" jogador1="Alberto" jogador2="Thiago" regraMovimento="regraMovimento1" sopro="false"
+
+ativarPosicionamentoManual
+
+posicionarPeca cor=2 linha="f" coluna=1
+
+posicionarPeca cor=1 linha="e" coluna=2
+
+posicionarPeca cor=1 linha="c" coluna=4
+
+setVez jogador=2
+
+#Jogador 2 vence
+movimentoJogador numeroJogador=2 linhaOrigem="f" colunaOrigem=1 linhaDestino="d" colunaDestino=3
+
+movimentoJogador numeroJogador=2 linhaOrigem="d" colunaOrigem=3 linhaDestino="b" colunaDestino=5
+
+expect "Thiago" getVencedorPartida id="p03"
+
+criarTabuleiro tamanho=8
+
+iniciarPartida id="p04" jogador1="Nathan" jogador2="Melissa" regraMovimento="regraMovimento1" sopro="false"
+
+ativarPosicionamentoManual
+
+posicionarPeca cor=1 linha="c" coluna=8
+
+posicionarPeca cor=2 linha="d" coluna=7
+
+posicionarPeca cor=2 linha="f" coluna=5
+
+setVez jogador=2
+
+#Jogador 1 vence
+movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=8 linhaDestino="e" colunaDestino=6
+
+movimentoJogador numeroJogador=1 linhaOrigem="e" colunaOrigem=6 linhaDestino="g" colunaDestino=4
+
+expect "Nathan" getVencedorPartida id="p04"
+
+zerarJogo
+
+quit

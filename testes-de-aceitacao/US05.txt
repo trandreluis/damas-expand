@@ -4,7 +4,7 @@ zerarJogo
 
 criarTabuleiro tamanho=8
 
-iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro2"
+iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
 
 movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=2 linhaDestino="d" colunaDestino=3
 
@@ -44,9 +44,9 @@ finalizarESalvarJogo
 
 criarTabuleiro tamanho=8
 
-expectError "Ja existe uma partida salva com essa identificacao" iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro2"
+expectError "Ja existe uma partida salva com essa identificacao" iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
 
-iniciarPartida id="p02" jogador1="Arthur" jogador2="Juliana" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro2"
+iniciarPartida id="p02" jogador1="Arthur" jogador2="Juliana" regraMovimento="regraMovimento1" sopro="false"
 
 movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=6 linhaDestino="d" colunaDestino=7
 

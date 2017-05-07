@@ -5,7 +5,7 @@ zerarJogo
 criarTabuleiro tamanho=8
 
 #Nao permite sopro
-iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro2"
+iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
 
 movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=2 linhaDestino="d" colunaDestino=3
 
@@ -51,7 +51,7 @@ expect "false" isOcupada linha="f" coluna=2
 
 encerrarPartidaSemSalvar
 
-iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro2"
+iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
 
 movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=4 linhaDestino="d" colunaDestino=5
 

@@ -3,8 +3,10 @@ zerarJogo
 
 criarTabuleiro tamanho=8
 
-#comeca uma partida descartavel
-iniciarPartidaPlacebo
+iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" regraSopro="regraSopro1"
+
+#Uma vez chamado, este metodo limpa todas as pecas do tabuleiro
+ativarPosicionamentoManual
 
 #metodo de posicionamento de pecas no tabuleiro (para testes)
 #cores: 1- Branca, 2 - Preta
@@ -80,7 +82,7 @@ expect "false" isDama linha="g" coluna=6
 
 expect "false" isDama linha="g" coluna=8
 
-finalizarPartida
+encerrarPartidaSemSalvar
 
 zerarJogo
 

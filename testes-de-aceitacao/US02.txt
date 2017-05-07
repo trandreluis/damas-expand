@@ -15,12 +15,12 @@ zerarJogo
 
 criarTabuleiro tamanho=8
 
-iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro1"
+iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
 
 #este metodo encerra a partida sem salvar a instancia (equivalente a sair do jogo, exibir o dialogo de salvamento e o jogador selecionar nao)
 encerrarPartidaSemSalvar
 
-iniciarPartida id="p01" jogador1="Marcelo" jogador2="Augusto Cesar" quemComeca=2 regraMovimento="regraMovimento2" regraSopro="regraSopro1"
+iniciarPartida id="p01" jogador1="Marcelo" jogador2="Augusto Cesar" regraMovimento="regraMovimento1" sopro="false"
 
 encerrarPartidaSemSalvar
 
@@ -28,27 +28,23 @@ encerrarPartidaSemSalvar
 #Partidas invalidas:
 #Jogadores sem nome
 
-expectError "Nome do jogador deve ser definido" iniciarPartida jogador1= jogador2="Carlos" quemComeca=2 regraMovimento="regraMovimento1" regraSopro="regraSopro1"
+expectError "Nome do jogador deve ser definido" iniciarPartida jogador1= jogador2="Carlos" regraMovimento="regraMovimento1" sopro="false"
 
-expectError "Nome do jogador deve ser definido" iniciarPartida jogador1="Paulo" jogador2= quemComeca=1 regraMovimento="regraMovimento1" regraSopro="regraSopro1"
-
-#Numero de jogador iniciante (que comeca) invalido ou nulo
-
-expectError "Numero de jogador invalido" iniciarPartida jogador1="Augusto" jogador2="Jonathan" quemComeca=3 regraMovimento="regraMovimento1" regraSopro="regraSopro1"
-
-expectError "Numero de jogador invalido" iniciarPartida jogador1="Solange" jogador1="Sheila" quemComeca= regraMovimento="regraMovimento1" regraSopro="regraSopro1"
+expectError "Nome do jogador deve ser definido" iniciarPartida jogador1="Paulo" jogador2= regraMovimento="regraMovimento1" sopro="false"
 
 #Comecar o jogo sem regra de movimentacao
 
-expectError "regra de movimentacao nao definida" iniciarPartida jogador1="Solange" jogador1="Sheila" quemComeca=1 regraMovimento= regraSopro="regraSopro1"
+expectError "regra de movimentacao nao definida" iniciarPartida jogador1="Solange" jogador1="Sheila" regraMovimento= sopro="false"
 
 #regraMovimento de movimentacao invalida
-expectError "regra de movimentacao invalida" iniciarPartida jogador1="Solange" jogador1="Sheila" quemComeca=2 regraMovimento="regraMovimento4" regraSopro="regraSopro1"
+expectError "regra de movimentacao invalida" iniciarPartida jogador1="Solange" jogador1="Sheila" regraMovimento="regraMovimento4" sopro="false"
+
+expectError "regra de movimentacao invalida" iniciarPartida jogador1="Solange" jogador1="Sheila" regraMovimento="" sopro="false"
 
 #regra de sopro invalida
-expectError "regra de sopro invalida" iniciarPartida jogador1="Solange" jogador1="Sheila" quemComeca=2 regraMovimento="regraMovimento2" regraSopro="regraSopro4"
+expectError "regra de sopro invalida" iniciarPartida jogador1="Solange" jogador1="Sheila" regraMovimento="regraMovimento2" sopro=""
 
-expectError "regra de sopro invalida" iniciarPartida jogador1="Solange" jogador1="Sheila" quemComeca=2 regraMovimento="regraMovimento2" regraSopro=
+expectError "regra de sopro invalida" iniciarPartida jogador1="Solange" jogador1="Sheila" regraMovimento="regraMovimento2" sopro=
 
 #Posicionamento de pedras
 
