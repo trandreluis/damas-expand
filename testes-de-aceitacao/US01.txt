@@ -4,49 +4,58 @@
 
 zerarJogo
 
-criarTabuleiro tamanho=10
+iniciarPartida idPartida="PT-01" dimensaoTabuleiro=10 jogadorUm="Joao" jogadorDois="Maria" comerVoltando=true sopro=true
 
-descartarTabuleiro
+zerarJogo
 
-criarTabuleiro tamanho=6
+iniciarPartida idPartida="PT-02" dimensaoTabuleiro=6 jogadorUm="Helosisa" jogadorDois="Luis" comerVoltando=false sopro=true
 
-descartarTabuleiro
+zerarJogo
 
-criarTabuleiro tamanho=8
+iniciarPartida idPartida="PT-03" dimensaoTabuleiro=22 jogadorUm="Kleber" jogadorDois="Paula" comerVoltando=false sopro=false
 
-descartarTabuleiro
+zerarJogo
 
-criarTabuleiro tamanho=12
+iniciarPartida idPartida="PT-21" dimensaoTabuleiro=16 jogadorUm="Clara" jogadorDois="Marcos" comerVoltando=true sopro=false
 
-descartarTabuleiro
+zerarJogo
 
 #Criacao de tabuleiros com tamanhos invalidos
 
-expectError "Tamanho de tabuleiro invalido" criarTabuleiro tamanho=4
+zerarJogo
 
-expectError "Tamanho de tabuleiro invalido" criarTabuleiro tamanho=15
+expectError "Tamanho de tabuleiro invalido" iniciarPartida idPartida="PT-12" dimensaoTabuleiro=4 jogadorUm="Joao" jogadorDois="Maria" comerVoltando=true sopro=true
 
-expectError "Tamanho de tabuleiro invalido" criarTabuleiro tamanho=7
+expectError "Tamanho de tabuleiro invalido" iniciarPartida idPartida="PT-80" dimensaoTabuleiro=15 jogadorUm="Heloisa" jogadorDois="Luis" comerVoltando=false sopro=true
 
-expectError "Tamanho de tabuleiro invalido" criarTabuleiro tamanho=5
+expectError "Tamanho de tabuleiro invalido" iniciarPartida idPartida="PT-13" dimensaoTabuleiro=7 jogadorUm="Kleber" jogadorDois="Paula" comerVoltando=false sopro=false
+
+expectError "Tamanho de tabuleiro invalido" iniciarPartida idPartida="PT-33" dimensaoTabuleiro=5 jogadorUm="Clara" jogadorDois="Marcos" comerVoltando=true sopro=false
 
 #Ultima casa a esquerda de cada jogador deve ser escura
 
-criarTabuleiro tamanho=8
+iniciarPartida idPartida="PT-44" dimensaoTabuleiro=8 jogadorUm="Joao" jogadorDois="Maria" comerVoltando=true sopro=true
 
-expect "preta" getCorCasa linha="a" coluna=8
+expect "escura" getCorCasa idTabuleiro="PT-44" linha=1 coluna=a
 
-expect "preta" getCorCasa linha="h" coluna=1
+expect "escura" getCorCasa idTabuleiro="PT-44" linha=1 coluna="g"
 
-descartarTabuleiro
+expect "branca" getCorCasa idTabuleiro="PT-44" linha=4 coluna="a"
 
-criarTabuleiro tamanho=10
+expect "branca" getCorCasa idTabuleiro="PT-44" linha=7 coluna="b"
 
-expect "preta" getCorCasa linha="a" coluna=10
+zerarJogo
 
-expect "preta" getCorCasa linha="j" coluna=1
+iniciarPartida idPartida="PT-12" dimensaoTabuleiro=10 jogadorUm="Heloisa" jogadorDois="Luis" comerVoltando=false sopro=true
+
+expect "escura" getCorCasa idTabuleiro="PT-12" linha=10 coluna="a"
+
+expect "escura" getCorCasa idTabuleiro="PT-12" linha=1 coluna="i"
+
+expect "branca" getCorCasa idTabuleiro="PT-12" linha=6 coluna="e"
+
+expect "branca" getCorCasa idTabuleiro="PT-12" linha=5 coluna="h"
 
 zerarJogo
 
 quit
-
