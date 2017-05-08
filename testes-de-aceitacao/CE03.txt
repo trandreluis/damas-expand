@@ -1,0 +1,47 @@
+#Caso de Empate 3 - Duas damas x 1 dama + 1 pedra
+
+zerarJogo
+
+criarTabuleiro tamanho=8
+
+iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
+
+ativarPosicionamentoManual
+
+posicionarPeca cor=1 linha="h" coluna=3
+
+posicionarPeca cor=1 linha="h" coluna=7
+
+posicionarPeca cor=2 linha="a" coluna=6
+
+posicionarPeca cor=2 linha="b" coluna=5
+
+setVez jogador=1
+
+movimentoJogador numeroJogador=1 linhaOrigem="h" colunaOrigem=3 linhaDestino="g" colunaDestino=2
+
+movimentoJogador numeroJogador=2 linhaOrigem="b" colunaOrigem=5 linhaDestino="c" colunaDestino=4
+
+movimentoJogador numeroJogador=1 linhaOrigem="h" colunaOrigem=7 linhaDestino="g" colunaDestino=8
+
+movimentoJogador numeroJogador=2 linhaOrigem="c" colunaOrigem=4 linhaDestino="d" colunaDestino=3
+
+movimentoJogador numeroJogador=1 linhaOrigem="g" colunaOrigem=8 linhaDestino="f" colunaDestino=7
+
+movimentoJogador numeroJogador=2 linhaOrigem="a" colunaOrigem=6 linhaDestino="b" colunaDestino=5
+
+movimentoJogador numeroJogador=1 linhaOrigem="f" colunaOrigem=7 linhaDestino="e" colunaDestino=6
+
+movimentoJogador numeroJogador=2 linhaOrigem="d" colunaOrigem=3 linhaDestino="e" colunaDestino=2
+
+movimentoJogador numeroJogador=1 linhaOrigem="e" colunaOrigem=6 linhaDestino="d" colunaDestino=5
+
+movimentoJogador numeroJogador=2 linhaOrigem="e" colunaOrigem=2 linhaDestino="f" colunaDestino=1
+
+#Finaliza o jogo
+
+expect "Empate" getVencedorPartida id="p01"
+
+zerarJogo
+
+quit
