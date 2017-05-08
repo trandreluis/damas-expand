@@ -8,23 +8,23 @@ criarTabuleiro tamanho=8
 
 iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
 
-movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=2 linhaDestino="d" colunaDestino=3
+movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="b" linhaDestino=4 colunaDestino="c"
 
-movimentoJogador numeroJogador=2 linhaOrigem="f" colunaOrigem=5 linhaDestino="e" colunaDestino=6
+movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="e" linhaDestino=5 colunaDestino="f"
 
 #Momvimentacoes invalidas (em caso de erro, o jogador nao conclui a jogada e ainda fica sendo a vez dele)
 
-expectError "Casa ocupada" movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=4 linhaDestino="d" colunaDestino=3
+expectError "Casa ocupada" movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="d" linhaDestino=4 colunaDestino="c"
 
-expectError "Casas subsequentes nao podem ser ocupadas" movimentoJogador numeroJogador=1 linhaOrigem="d" colunaOrigem=2 linhaDestino="d" colunaDestino=3
+expectError "Casas subsequentes nao podem ser ocupadas" movimentoJogador numeroJogador=1 linhaOrigem=4 colunaOrigem="b" linhaDestino=4 colunaDestino="c"
 
-expectError "A casa de origem esta vazia" movimentoJogador numeroJogador=1 linhaOrigem="b" colunaOrigem=1 linhaDestino="g" colunaDestino=3
+expectError "A casa de origem esta vazia" movimentoJogador numeroJogador=1 linhaOrigem=2 colunaOrigem="a" linhaDestino=7 colunaDestino="c"
 
-expectError "A casa de destino nao existe neste tabuleiro" movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=8 linhaDestino="d" colunaDestino=9
+expectError "A casa de destino nao existe neste tabuleiro" movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="h" linhaDestino=4 colunaDestino=9
 
-expectError "Jogador, ainda nao e sua vez" movimentoJogador numeroJogador=2 linhaOrigem="f" colunaOrigem=1 linhaDestino="e" colunaDestino=2
+expectError "Jogador, ainda nao e sua vez" movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="a" linhaDestino=5 colunaDestino="b"
 
-expectError "A peca pertence ao adversario" movimentoJogador numeroJogador=1 linhaOrigem="f" colunaOrigem=1 linhaDestino="e" colunaDestino=2
+expectError "A peca pertence ao adversario" movimentoJogador numeroJogador=1 linhaOrigem=6 colunaOrigem="a" linhaDestino=5 colunaDestino="b"
 
 encerrarPartidaSemSalvar
 
@@ -32,7 +32,7 @@ criarTabuleiro tamanho=8
 
 iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
 
-expectError "Voce nao pode se mover por mais de uma casa vazia" movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=4 linhaDestino="f" colunaDestino=6
+expectError "Voce nao pode se mover por mais de uma casa vazia" movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="d" linhaDestino=6 colunaDestino="f"
 
 encerrarPartidaSemSalvar
 

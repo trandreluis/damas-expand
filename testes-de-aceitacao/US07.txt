@@ -8,14 +8,14 @@ iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraM
 
 ativarPosicionamentoManual
 
-posicionarPeca cor=2 linha="f" coluna=5
+posicionarPeca cor=2 linha=6 coluna="e"
 
-posicionarPeca cor=1 linha="e" coluna=4
+posicionarPeca cor=1 linha=5 coluna="d"
 
 setVez jogador=1
 
 #Jogador 1 vence
-movimentoJogador numeroJogador=1 linhaOrigem="e" colunaOrigem=4 linhaDestino="g" colunaDestino=6
+movimentoJogador numeroJogador=1 linhaOrigem=5 colunaOrigem="d" linhaDestino=7 colunaDestino="f"
 
 expect "Pedro" getVencedorPartida id="p01"
 
@@ -25,14 +25,14 @@ iniciarPartida id="p02" jogador1="Christina" jogador2="Samara" regraMovimento="r
 
 ativarPosicionamentoManual
 
-posicionarPeca cor=2 linha="c" coluna=4
+posicionarPeca cor=2 linha=3 coluna="d"
 
-posicionarPeca cor=1 linha="b" coluna=5
+posicionarPeca cor=1 linha=2 coluna="e"
 
 setVez jogador=2
 
 #Jogador 2 vence
-movimentoJogador numeroJogador=2 linhaOrigem="c" colunaOrigem=4 linhaDestino="a" colunaDestino=6
+movimentoJogador numeroJogador=2 linhaOrigem=3 colunaOrigem="d" linhaDestino=1 colunaDestino="f"
 
 expect "Samara" getVencedorPartida id="p02"
 
@@ -44,18 +44,18 @@ iniciarPartida id="p03" jogador1="Alberto" jogador2="Thiago" regraMovimento="reg
 
 ativarPosicionamentoManual
 
-posicionarPeca cor=2 linha="f" coluna=1
+posicionarPeca cor=2 linha=6 coluna="a"
 
-posicionarPeca cor=1 linha="e" coluna=2
+posicionarPeca cor=1 linha=5 coluna="b"
 
-posicionarPeca cor=1 linha="c" coluna=4
+posicionarPeca cor=1 linha=3 coluna="d"
 
 setVez jogador=2
 
 #Jogador 2 vence
-movimentoJogador numeroJogador=2 linhaOrigem="f" colunaOrigem=1 linhaDestino="d" colunaDestino=3
+movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="a" linhaDestino=4 colunaDestino="c"
 
-movimentoJogador numeroJogador=2 linhaOrigem="d" colunaOrigem=3 linhaDestino="b" colunaDestino=5
+movimentoJogador numeroJogador=2 linhaOrigem=4 colunaOrigem="c" linhaDestino=2 colunaDestino="e"
 
 expect "Thiago" getVencedorPartida id="p03"
 
@@ -65,18 +65,18 @@ iniciarPartida id="p04" jogador1="Nathan" jogador2="Melissa" regraMovimento="reg
 
 ativarPosicionamentoManual
 
-posicionarPeca cor=1 linha="c" coluna=8
+posicionarPeca cor=1 linha=3 coluna="h"
 
-posicionarPeca cor=2 linha="d" coluna=7
+posicionarPeca cor=2 linha=4 coluna="g"
 
-posicionarPeca cor=2 linha="f" coluna=5
+posicionarPeca cor=2 linha=6 coluna="e"
 
 setVez jogador=2
 
 #Jogador 1 vence
-movimentoJogador numeroJogador=1 linhaOrigem="c" colunaOrigem=8 linhaDestino="e" colunaDestino=6
+movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="h" linhaDestino=5 colunaDestino="f"
 
-movimentoJogador numeroJogador=1 linhaOrigem="e" colunaOrigem=6 linhaDestino="g" colunaDestino=4
+movimentoJogador numeroJogador=1 linhaOrigem=5 colunaOrigem="f" linhaDestino=7 colunaDestino="d"
 
 expect "Nathan" getVencedorPartida id="p04"
 

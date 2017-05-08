@@ -6,31 +6,31 @@ iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraM
 
 ativarPosicionamentoManual
 
-posicionarPeca cor=1 linha="h" coluna=1
+posicionarPeca cor=1 linha=8 coluna="a"
 
-posicionarPeca cor=2 linha="a" coluna=4
+posicionarPeca cor=2 linha=1 coluna="d"
 
 setVez jogador=1
 
-movimentoJogador numeroJogador=1 linhaOrigem="h" colunaOrigem=1 linhaDestino="g" colunaDestino=2
+movimentoJogador numeroJogador=1 linhaOrigem=8 colunaOrigem="a" linhaDestino=7 colunaDestino="b"
 
-movimentoJogador numeroJogador=2 linhaOrigem="a" colunaOrigem=4 linhaDestino="b" colunaDestino=5
+movimentoJogador numeroJogador=2 linhaOrigem=1 colunaOrigem="d" linhaDestino=2 colunaDestino="e"
 
-movimentoJogador numeroJogador=1 linhaOrigem="g" colunaOrigem=2 linhaDestino="f" colunaDestino=1
+movimentoJogador numeroJogador=1 linhaOrigem=7 colunaOrigem="b" linhaDestino=6 colunaDestino="a"
 
-movimentoJogador numeroJogador=2 linhaOrigem="b" colunaOrigem=5 linhaDestino="c" colunaDestino=6
+movimentoJogador numeroJogador=2 linhaOrigem=2 colunaOrigem="e" linhaDestino=3 colunaDestino="f"
 
-movimentoJogador numeroJogador=1 linhaOrigem="f" colunaOrigem=1 linhaDestino="e" colunaDestino=2
+movimentoJogador numeroJogador=1 linhaOrigem=6 colunaOrigem="a" linhaDestino=5 colunaDestino="b"
 
-movimentoJogador numeroJogador=2 linhaOrigem="c" colunaOrigem=6 linhaDestino="d" colunaDestino=7
+movimentoJogador numeroJogador=2 linhaOrigem=3 colunaOrigem="f" linhaDestino=4 colunaDestino="g"
 
-movimentoJogador numeroJogador=1 linhaOrigem="e" colunaOrigem=2 linhaDestino="d" colunaDestino=1
+movimentoJogador numeroJogador=1 linhaOrigem=5 colunaOrigem="b" linhaDestino=4 colunaDestino="a"
 
-movimentoJogador numeroJogador=2 linhaOrigem="d" colunaOrigem=7 linhaDestino="c" colunaDestino=6
+movimentoJogador numeroJogador=2 linhaOrigem=4 colunaOrigem="g" linhaDestino=3 colunaDestino="f"
 
-movimentoJogador numeroJogador=1 linhaOrigem="d" colunaOrigem=1 linhaDestino="c" colunaDestino=2
+movimentoJogador numeroJogador=1 linhaOrigem=4 colunaOrigem="a" linhaDestino=3 colunaDestino="b"
 
-movimentoJogador numeroJogador=2 linhaOrigem="d" colunaOrigem=6 linhaDestino="e" colunaDestino=7
+movimentoJogador numeroJogador=2 linhaOrigem=4 colunaOrigem="f" linhaDestino=5 colunaDestino="g"
 
 #Finaliza o jogo
 
