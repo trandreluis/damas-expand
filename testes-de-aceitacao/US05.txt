@@ -2,9 +2,9 @@
 
 zerarJogo
 
-criarTabuleiro tamanho=8
+criarTabuleiro idTabuleiro="TB-01" dimensao=8
 
-iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
+iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
 movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="b" linhaDestino=4 colunaDestino="c"
 
@@ -12,7 +12,7 @@ movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="e" linhaDestino=5 c
 
 finalizarESalvarJogo
 
-continuarPartida id="p01"
+continuarPartida id="PT-01"
 
 expect "true" isOcupada linha=4 coluna="c"
 
@@ -30,7 +30,7 @@ movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="d" linhaDestino=4 c
 
 finalizarESalvarJogo
 
-continuarPartida id="p01"
+continuarPartida id="PT-01"
 
 expect "true" isOcupada linha=3 coluna="h"
 
@@ -42,11 +42,9 @@ expect "false" isOcupada linha=3 coluna="d"
 
 finalizarESalvarJogo
 
-criarTabuleiro tamanho=8
+expectError "Ja existe uma partida salva com essa identificacao" iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
-expectError "Ja existe uma partida salva com essa identificacao" iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
-
-iniciarPartida id="p02" jogador1="Arthur" jogador2="Juliana" regraMovimento="regraMovimento1" sopro="false"
+iniciarPartida id="PT-02" idTabuleiro="TB-01" jogador1="Arthur" jogador2="Juliana" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
 movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="f" linhaDestino=4 colunaDestino="g"
 
@@ -54,7 +52,7 @@ movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="a" linhaDestino=5 c
 
 finalizarESalvarJogo
 
-continuarPartida id="p02"
+continuarPartida id="PT-02"
 
 expect "true" isOcupada linha=5 coluna="b"
 
@@ -66,9 +64,9 @@ expect "false" isOcupada linha=3 coluna="f"
 
 finalizarESalvarJogo
 
-descartarPartida id="p02"
+descartarPartida id="PT-02"
 
-expectError "Nao existe partida com essa identificacao" continuarPartida id="p02"
+expectError "Nao existe partida com essa identificacao" continuarPartida id="PT-02"
 
 zerarJogo
 

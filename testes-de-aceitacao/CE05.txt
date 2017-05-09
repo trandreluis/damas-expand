@@ -1,8 +1,8 @@
 #Caso de Empate 05 - Dama x Dama + Peca
 
-criarTabuleiro tamanho=8
+criarTabuleiro idTabuleiro="TB-01" dimensao=8
 
-iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
+iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
 ativarPosicionamentoManual
 

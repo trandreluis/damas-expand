@@ -2,10 +2,10 @@
 
 zerarJogo
 
-criarTabuleiro tamanho=8
+criarTabuleiro idTabuleiro="TB-01" dimensao=8
 
 #Nao permite sopro
-iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
+iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
 movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="b" linhaDestino=4 colunaDestino="c"
 
@@ -51,7 +51,7 @@ expect "false" isOcupada linha=6 coluna="b"
 
 encerrarPartidaSemSalvar
 
-iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
+iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
 movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="d" linhaDestino=4 colunaDestino="e"
 
@@ -91,7 +91,7 @@ movimentoJogador numeroJogador=2 linhaOrigem=3 colunaOrigem="d" linhaDestino=1 c
 encerrarPartidaSemSalvar
 
 #Permite sopro. Jogador que soprar perde a partida
-iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="true"
+iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="true"
 
 movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="b" linhaDestino=4 colunaDestino="c"
 
@@ -103,11 +103,11 @@ movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="h" linhaDestino=4 c
 movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="a" linhaDestino=5 colunaDestino="b"
 
 #partida foi encerrada e jogador1 ganhou
-expect "Pedro" getVencedorPartida id="p01"
+expect "Pedro" getVencedorPartida id="PT-01"
 
-descartarPartida id="p01"
+descartarPartida id="PT-01"
 
-iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="true"
+iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="true"
 
 movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="b" linhaDestino=4 colunaDestino="c"
 
@@ -121,12 +121,11 @@ movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="d" linhaDestino=4 c
 
 movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="g" linhaDestino=5 colunaDestino="f"
 
-#jogador 1 comete sopro
-expectError "A regra de sopro definida nao permite soprar" movimentoJogador numeroJogador=1 linhaOrigem=4 colunaOrigem="c" linhaDestino=5 colunaDestino="d"
-
 #partida foi encerrada e jogador 2 ganhou
 
-expect "Maria" getVencedorPartida id="p01"
+movimentoJogador numeroJogador=1 linhaOrigem=4 colunaOrigem="c" linhaDestino=5 colunaDestino="d"
+
+expect "Maria" getVencedorPartida id="PT-01"
 
 zerarJogo
 

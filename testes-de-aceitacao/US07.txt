@@ -2,9 +2,9 @@
 
 zerarJogo
 
-criarTabuleiro tamanho=8
+criarTabuleiro idTabuleiro="TB-01" dimensao=8
 
-iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
+iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
 ativarPosicionamentoManual
 
@@ -17,11 +17,9 @@ setVez jogador=1
 #Jogador 1 vence
 movimentoJogador numeroJogador=1 linhaOrigem=5 colunaOrigem="d" linhaDestino=7 colunaDestino="f"
 
-expect "Pedro" getVencedorPartida id="p01"
+expect "Pedro" getVencedorPartida id="PT-01"
 
-criarTabuleiro tamanho=8
-
-iniciarPartida id="p02" jogador1="Christina" jogador2="Samara" regraMovimento="regraMovimento1" sopro="false"
+iniciarPartida id="PT-02" jogador1="Christina" jogador2="Samara" jogadorPedraBranca=1 regraMovimento="regraMovimento1" 	permiteSopro="false"
 
 ativarPosicionamentoManual
 
@@ -34,13 +32,13 @@ setVez jogador=2
 #Jogador 2 vence
 movimentoJogador numeroJogador=2 linhaOrigem=3 colunaOrigem="d" linhaDestino=1 colunaDestino="f"
 
-expect "Samara" getVencedorPartida id="p02"
+expect "Samara" getVencedorPartida id="PT-02"
 
 #Jogador come as duas unicas pecas do adversario
 
-criarTabuleiro tamanho=8
+criarTabuleiro dimensao=8
 
-iniciarPartida id="p03" jogador1="Alberto" jogador2="Thiago" regraMovimento="regraMovimento1" sopro="false"
+iniciarPartida id="PT-03" jogador1="Alberto" jogador2="Thiago" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
 ativarPosicionamentoManual
 
@@ -57,11 +55,11 @@ movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="a" linhaDestino=4 c
 
 movimentoJogador numeroJogador=2 linhaOrigem=4 colunaOrigem="c" linhaDestino=2 colunaDestino="e"
 
-expect "Thiago" getVencedorPartida id="p03"
+expect "Thiago" getVencedorPartida id="PT-03"
 
-criarTabuleiro tamanho=8
+criarTabuleiro dimensao=8
 
-iniciarPartida id="p04" jogador1="Nathan" jogador2="Melissa" regraMovimento="regraMovimento1" sopro="false"
+iniciarPartida id="PT-04" jogador1="Nathan" jogador2="Melissa" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
 ativarPosicionamentoManual
 
@@ -78,7 +76,7 @@ movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="h" linhaDestino=5 c
 
 movimentoJogador numeroJogador=1 linhaOrigem=5 colunaOrigem="f" linhaDestino=7 colunaDestino="d"
 
-expect "Nathan" getVencedorPartida id="p04"
+expect "Nathan" getVencedorPartida id="PT-04"
 
 zerarJogo
 
