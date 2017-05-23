@@ -11,7 +11,7 @@ Testes de Aceitação: http://github.com/ThallesAraujo
 Fachada para os testes: http://github.com/trandreluis
 
 # Sobre o EasyAccept
-Link para download: http://sourceforge.net/projects/easyaccept/files/easyaccept/
+Link para download (versão correta): http://www.mediafire.com/file/cajddnxagnft27d/easyaccept.jar
 
 Link de tutorial com exemplo: http://easyaccept.sourceforge.net/tutorial.html
 
