@@ -34,13 +34,9 @@ expectError "Tamanho de tabuleiro invalido" criarTabuleiro idTabuleiro="TB-08" d
 
 #Verificacao de posicionamento das pecas
 
-criarTabuleiro idTabuleiro="TB-04" dimensao=8
+criarTabuleiro idTabuleiro="TB-01" dimensao=8
 
-regraMovimento idRegraMovimento="RM-01" comerVoltando=false
-
-regraSopro idRegraSopro="RS-01" permitirSopro=false
-
-iniciarPartida idPartida="PT-02" idTabuleiro="TB-04" jogadorUm="Carlos" jogadorDois="Cezar" jogadorPedraBranca=1 idRegraMovimento="RM-01" idRegraSopro="RS-01"
+iniciarPartida id="PT-02" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
 expect true isOcupada idPartida="PT-02" linha=1 coluna="a"
 expect false isOcupada idPartida="PT-02" linha=1 coluna="b"
@@ -121,9 +117,9 @@ expect true isOcupada idPartida="PT-02" linha=8 coluna="h"
 expectError "O ID da partida informado e invalido" getCorCasa idPartida="" linha=1 coluna="a"
 expectError "O ID da partida informado e invalido" getCorCasa idPartida= linha=2 coluna="b"
 expectError "O ID da partida informado nao existe" getCorCasa idPartida="PT-85" linha=3 coluna="c"
-expectError "A linha informada nao e valida" getCorCasa idPartida="PT-85" linha= coluna="d"
+expectError "A linha informada nao e valida" getCorCasa idPartida="PT-85" linha=-9 coluna="d"
 expectError "A coluna informada nao e valida" getCorCasa idPartida="PT-85" linha=4 coluna=""
-expectError "A coluna informada nao e valida" getCorCasa idPartida="PT-85" linha=5 coluna=
+expectError "A coluna informada nao e valida" getCorCasa idPartida="PT-85" linha=5 coluna=""
 
 #Entradas validas
 
@@ -206,7 +202,7 @@ expect "branca" getCorCasa idPartida="PT-02" linha=8 coluna="h"
 expectError "A linha informada nao esta nos limites do tabuleiro" getCorPeca idPartida="PT-02" linha=123 coluna="a"
 expectError "A linha informada nao esta nos limites do tabuleiro" getCorPeca idPartida="PT-02" linha=0 coluna="c"
 expectError "A linha informada nao esta nos limites do tabuleiro" getCorPeca idPartida="PT-02" linha=-1 coluna="e"
-expectError "A linha informada nao e valida" getCorPeca idPartida="PT-02" linha= coluna="a"
+expectError "A linha informada nao e valida" getCorPeca idPartida="PT-02" linha=-88 coluna="a"
 expectError "A coluna informada nao esta nos limites do tabuleiro" getCorPeca idPartida="PT-02" linha=4 coluna="z"
 expectError "A coluna informada nao e valida" getCorPeca idPartida="PT-02" linha=1 coluna="z"
 expectError "A coluna informada nao e valida" getCorPeca idPartida="PT-02" linha=4 coluna=""
