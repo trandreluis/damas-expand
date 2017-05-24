@@ -140,8 +140,8 @@ public interface IFacadeJogoDamas {
 	/**
 	 * Obtem o nome da cor de uma determinada casa do tabuleiro informado
 	 * 
-	 * @param idTabuleiro
-	 *            Identificador do tabuleiro
+	 * @param idPartida
+	 *            Identificador da partida
 	 * 
 	 * @param linha
 	 *            Linha de consulta onde a peca devera estar
@@ -155,7 +155,7 @@ public interface IFacadeJogoDamas {
 	 *             Excecao que pode ser lancada em caso de nao atendimento aos
 	 *             casos de teste
 	 */
-	String getCorCasa(String idTabuleiro, int linha, String coluna) throws DamasException;
+	String getCorCasa(String idPartida, int linha, String coluna) throws DamasException;
 
 	/**
 	 * Obtem o nome da cor de uma determinada peca em uma determinada casa do
