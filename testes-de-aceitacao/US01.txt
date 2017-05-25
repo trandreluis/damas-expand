@@ -203,7 +203,7 @@ expectError "A linha informada nao esta nos limites do tabuleiro" getCorPeca idP
 expectError "A linha informada nao esta nos limites do tabuleiro" getCorPeca idPartida="PT-02" linha=0 coluna="c"
 expectError "A linha informada nao esta nos limites do tabuleiro" getCorPeca idPartida="PT-02" linha=-1 coluna="e"
 expectError "A linha informada nao e valida" getCorPeca idPartida="PT-02" linha=-88 coluna="a"
-expectError "A coluna informada nao esta nos limites do tabuleiro" getCorPeca idPartida="PT-02" linha=4 coluna="z"
+expectError "A coluna informada nao e valida" getCorPeca idPartida="PT-02" linha=4 coluna="z"
 expectError "A coluna informada nao e valida" getCorPeca idPartida="PT-02" linha=1 coluna="z"
 expectError "A coluna informada nao e valida" getCorPeca idPartida="PT-02" linha=4 coluna=""
 expectError "A coluna informada nao e valida" getCorPeca idPartida="PT-02" linha=2 coluna=
