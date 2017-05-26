@@ -13,53 +13,52 @@
 
 zerarJogo
 
-criarTabuleiro tamanho=8
+criarTabuleiro idTabuleiro="TB-01" tamanho=8
 
-iniciarPartida id="p01" jogador1="Pedro" jogador2="Maria" regraMovimento="regraMovimento1" sopro="false"
+iniciarPartida id="p01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
 #este metodo encerra a partida sem salvar a instancia (equivalente a sair do jogo, exibir o dialogo de salvamento e o jogador selecionar nao)
-encerrarPartidaSemSalvar
+encerrarPartidaSemSalvar id="p01"
 
-iniciarPartida id="p01" jogador1="Marcelo" jogador2="Augusto Cesar" regraMovimento="regraMovimento1" sopro="false"
+iniciarPartida id="p02" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
-encerrarPartidaSemSalvar
+encerrarPartidaSemSalvar id="p02"
 
 
 #Partidas invalidas:
 #Jogadores sem nome
 
-expectError "Nome do jogador deve ser definido" iniciarPartida jogador1= jogador2="Carlos" regraMovimento="regraMovimento1" sopro="false"
+criarTabuleiro idTabuleiro="TB-22" dimensao=8
 
-expectError "Nome do jogador deve ser definido" iniciarPartida jogador1="Paulo" jogador2= regraMovimento="regraMovimento1" sopro="false"
+expectError "Nome do jogador deve ser definido" iniciarPartida id="p03" idTabuleiro="TB-01" jogador1="" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
+
+expectError "Nome do jogador deve ser definido" iniciarPartida id="p03" idTabuleiro="TB-01" jogador1="Carlos" jogador2="" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
 #Comecar o jogo sem regra de movimentacao
 
-expectError "regra de movimentacao nao definida" iniciarPartida jogador1="Solange" jogador1="Sheila" regraMovimento= sopro="false"
+expectError "regra de movimentacao nao definida" iniciarPartida id="p03" idTabuleiro="TB-01" jogador1="Carlos" jogador2="Luis" jogadorPedraBranca=1 regraMovimento="" permiteSopro="false"
 
 #regraMovimento de movimentacao invalida
-expectError "regra de movimentacao invalida" iniciarPartida jogador1="Solange" jogador1="Sheila" regraMovimento="regraMovimento4" sopro="false"
+expectError "regra de movimentacao invalida" iniciarPartida id="p03" idTabuleiro="TB-01" jogador1="Carlos" jogador2="Luis" jogadorPedraBranca=1 regraMovimento="regraMovimento4" permiteSopro="false"
 
-expectError "regra de movimentacao invalida" iniciarPartida jogador1="Solange" jogador1="Sheila" regraMovimento="" sopro="false"
-
-#regra de sopro invalida
-expectError "regra de sopro invalida" iniciarPartida jogador1="Solange" jogador1="Sheila" regraMovimento="regraMovimento2" sopro=""
-
-expectError "regra de sopro invalida" iniciarPartida jogador1="Solange" jogador1="Sheila" regraMovimento="regraMovimento2" sopro=
+expectError "regra de movimentacao invalida" iniciarPartida id="p03" idTabuleiro="TB-01" jogador1="Carlos" jogador2="Luis" jogadorPedraBranca=1 regraMovimento="" permiteSopro="false"
 
 #Posicionamento de pedras
 
 #ao criar tabuleiro, o mesmo ja deve estar com as pecas posicionadas
-criarTabuleiro tamanho=8
+criarTabuleiro idTabuleiro="TB-77" tamanho=8
 
-expect "true" isOcupada linha="a" coluna=1
+iniciarPartida id="PT-76" idTabuleiro="TB-01" jogador1="Carlos" jogador2="Luis" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
-expect "false" isOcupada linha="a" coluna=2
+expect "true" isOcupada idPartida="PT-76" linha=1 coluna="a"
 
-expect "true" isOcupada linha="h" coluna=8
+expect "false" isOcupada idPartida="PT-76" linha=2 coluna="a"
 
-expect "false" isOcupada linha"h" coluna=7
+expect "true" isOcupada idPartida="PT-76" linha=8 coluna="h"
 
-encerrarPartidaSemSalvar
+expect "false" isOcupada idPartida="PT-76" linha=7 coluna="h"
+
+encerrarPartidaSemSalvar id="PT-76"
 
 zerarJogo
 
