@@ -10,17 +10,17 @@ movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="b" linhaDestino=4 c
 
 movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="e" linhaDestino=5 colunaDestino="f"
 
-finalizarESalvarJogo
+finalizarESalvarJogo idPartida="PT-01"
 
 continuarPartida id="PT-01"
 
-expect "true" isOcupada linha=4 coluna="c"
+expect "true" isOcupada idPartida="PT-01" linha=4 coluna="c"
 
-expect "true" isOcupada linha=5 coluna="f"
+expect "true" isOcupada idPartida="PT-01" linha=5 coluna="f"
 
-expect "false" isOcupada linha=3 coluna="b"
+expect "false" isOcupada idPartida="PT-01" linha=3 coluna="b"
 
-expect "false" isOcupada linha=6 coluna="e"
+expect "false" isOcupada idPartida="PT-01" linha=6 coluna="e"
 
 movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="h" linhaDestino=4 colunaDestino="g"
 
@@ -28,19 +28,19 @@ movimentoJogador numeroJogador=2 linhaOrigem=5 colunaOrigem="f" linhaDestino=3 c
 
 movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="d" linhaDestino=4 colunaDestino="e"
 
-finalizarESalvarJogo
+finalizarESalvarJogo idPartida="PT-01"
 
 continuarPartida id="PT-01"
 
-expect "true" isOcupada linha=3 coluna="h"
+expect "true" isOcupada idPartida="PT-01" linha=3 coluna="h"
 
-expect "true" isOcupada linha=4 coluna="e"
+expect "true" isOcupada idPartida="PT-01" linha=4 coluna="e"
 
-expect "false" isOcupada linha=5 coluna="f"
+expect "false" isOcupada idPartida="PT-01" linha=5 coluna="f"
 
-expect "false" isOcupada linha=3 coluna="d"
+expect "false" isOcupada idPartida="PT-01" linha=3 coluna="d"
 
-finalizarESalvarJogo
+finalizarESalvarJogo idPartida="PT-01"
 
 expectError "Ja existe uma partida salva com essa identificacao" iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
@@ -50,19 +50,19 @@ movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="f" linhaDestino=4 c
 
 movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="a" linhaDestino=5 colunaDestino="b"
 
-finalizarESalvarJogo
+finalizarESalvarJogo idPartida="PT-01"
 
 continuarPartida id="PT-02"
 
-expect "true" isOcupada linha=5 coluna="b"
+expect "true" isOcupada idPartida="PT-02" linha=5 coluna="b"
 
-expect "true" isOcupada linha=4 coluna="g"
+expect "true" isOcupada idPartida="PT-02" linha=4 coluna="g"
 
-expect "false" isOcupada linha=6 coluna="a"
+expect "false" isOcupada idPartida="PT-02" linha=6 coluna="a"
 
-expect "false" isOcupada linha=3 coluna="f"
+expect "false" isOcupada idPartida="PT-02" linha=3 coluna="f"
 
-finalizarESalvarJogo
+finalizarESalvarJogo idPartida="PT-02"
 
 descartarPartida id="PT-02"
 

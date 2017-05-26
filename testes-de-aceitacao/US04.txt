@@ -20,7 +20,7 @@ expectError "A regra de sopro definida nao permite soprar" movimentoJogador nume
 movimentoJogador numeroJogador=2 linhaOrigem=5 colunaOrigem="f" linhaDestino=3 colunaDestino="h"
 #Depois da linha acima, o jogador 2 capturou uma peca do jogador 1. Ela nao deve mais estar disponivel
 
-expect "false" isOcupada linha=4 coluna="g"
+expect "false" isOcupada idPartida="PT-01" linha=4 coluna="g"
 
 movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="d" linhaDestino=4 colunaDestino="e"
 
@@ -33,23 +33,23 @@ expectError "A regra de sopro definida nao permite soprar" movimentoJogador nume
 movimentoJogador numeroJogador=1 linhaOrigem=4 colunaOrigem="e" linhaDestino=6 colunaDestino="g"
 #Depois da linha acima, o jogador 1 capturou uma peca do jogador 2. Ela nao deve estar mais disponivel
 
-expect "false" isOcupada linha=5 coluna="f"
+expect "false" isOcupada idPartida="PT-01" linha=5 coluna="f"
 
 #mais uma captura
 movimentoJogador numeroJogador=2 linhaOrigem=7 colunaOrigem="f" linhaDestino=5 colunaDestino="h"
 
-expect "false" isOcupada linha=6 coluna="g"
+expect "false" isOcupada idPartida="PT-01" linha=6 coluna="g"
 
 movimentoJogador numeroJogador=1 linhaOrigem=2 colunaOrigem="c" linhaDestino=3 colunaDestino="d"
 
-movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="a" linhaDestino"e" colunaDestino="b"
+movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="a" linhaDestino=6 colunaDestino="b"
 
 #mais uma captura
-movimentoJogador numeroJogador=1 linhaOrigem"e" colunaOrigem="c" linhaDestino=8 colunaDestino="a"
+movimentoJogador numeroJogador=1 linhaOrigem=6 colunaOrigem="c" linhaDestino=8 colunaDestino="a"
 
-expect "false" isOcupada linha=6 coluna="b"
+expect "false" isOcupada idPartida="PT-01" linha=6 coluna="b"
 
-encerrarPartidaSemSalvar
+encerrarPartidaSemSalvar id="PT-01"
 
 iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
@@ -88,7 +88,7 @@ movimentoJogador numeroJogador=2 linhaOrigem=5 colunaOrigem="b" linhaDestino=3 c
 
 movimentoJogador numeroJogador=2 linhaOrigem=3 colunaOrigem="d" linhaDestino=1 colunaDestino="f"
 
-encerrarPartidaSemSalvar
+encerrarPartidaSemSalvar id="PT-01"
 
 #Permite sopro. Jogador que soprar perde a partida
 iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="true"
@@ -130,10 +130,3 @@ expect "Maria" getVencedorPartida id="PT-01"
 zerarJogo
 
 quit
-
-
-
-
-
-
-
