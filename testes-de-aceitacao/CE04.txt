@@ -4,13 +4,13 @@ criarTabuleiro idTabuleiro="TB-01" dimensao=8
 
 iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
-ativarPosicionamentoManual
+ativarPosicionamentoManual idPartida="PT-01"
 
-posicionarPeca cor=1 linha=8 coluna="a"
+posicionarPeca idPartida="PT-01" cor=1 linha=8 coluna="a"
 
-posicionarPeca cor=2 linha=1 coluna="d"
+posicionarPeca idPartida="PT-01" cor=2 linha=1 coluna="d"
 
-setVez jogador=1
+setVez idPartida="PT-01" jogador=1
 
 movimentoJogador numeroJogador=1 linhaOrigem=8 colunaOrigem="a" linhaDestino=7 colunaDestino="b"
 
