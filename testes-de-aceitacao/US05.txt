@@ -6,39 +6,39 @@ criarTabuleiro idTabuleiro="TB-01" dimensao=8
 
 iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
-movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="b" linhaDestino=4 colunaDestino="c"
+movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="c" linhaDestino=4 colunaDestino="d"
 
-movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="e" linhaDestino=5 colunaDestino="f"
-
-finalizarESalvarJogo idPartida="PT-01"
-
-continuarPartida id="PT-01"
-
-expect "true" isOcupada idPartida="PT-01" linha=4 coluna="c"
-
-expect "true" isOcupada idPartida="PT-01" linha=5 coluna="f"
-
-expect "false" isOcupada idPartida="PT-01" linha=3 coluna="b"
-
-expect "false" isOcupada idPartida="PT-01" linha=6 coluna="e"
-
-movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="h" linhaDestino=4 colunaDestino="g"
-
-movimentoJogador numeroJogador=2 linhaOrigem=5 colunaOrigem="f" linhaDestino=3 colunaDestino="h"
-
-movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="d" linhaDestino=4 colunaDestino="e"
+movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="f" linhaDestino=5 colunaDestino="g"
 
 finalizarESalvarJogo idPartida="PT-01"
 
 continuarPartida id="PT-01"
 
-expect "true" isOcupada idPartida="PT-01" linha=3 coluna="h"
+expect "true" isOcupada idPartida="PT-01" linha=4 coluna="d"
 
-expect "true" isOcupada idPartida="PT-01" linha=4 coluna="e"
+expect "true" isOcupada idPartida="PT-01" linha=5 coluna="g"
 
-expect "false" isOcupada idPartida="PT-01" linha=5 coluna="f"
+expect "false" isOcupada idPartida="PT-01" linha=3 coluna="c"
 
-expect "false" isOcupada idPartida="PT-01" linha=3 coluna="d"
+expect "false" isOcupada idPartida="PT-01" linha=6 coluna="f"
+
+movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="g" linhaDestino=4 colunaDestino="h"
+
+movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="b" linhaDestino=5 colunaDestino="a"
+
+movimentoJogador numeroJogador=1 linhaOrigem=2 colunaOrigem="b" linhaDestino=3 colunaDestino="c"
+
+finalizarESalvarJogo idPartida="PT-01"
+
+continuarPartida id="PT-01"
+
+expect "true" isOcupada idPartida="PT-01" linha=4 coluna="h"
+
+expect "true" isOcupada idPartida="PT-01" linha=5 coluna="a"
+
+expect "false" isOcupada idPartida="PT-01" linha=3 coluna="g"
+
+expect "false" isOcupada idPartida="PT-01" linha=2 coluna="b"
 
 finalizarESalvarJogo idPartida="PT-01"
 
@@ -46,21 +46,21 @@ expectError "Ja existe uma partida salva com essa identificacao" iniciarPartida 
 
 iniciarPartida id="PT-02" idTabuleiro="TB-01" jogador1="Arthur" jogador2="Juliana" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
-movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="f" linhaDestino=4 colunaDestino="g"
+movimentoJogador numeroJogador=1 linhaOrigem=1 colunaOrigem="a" linhaDestino=2 colunaDestino="b"
 
-movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="a" linhaDestino=5 colunaDestino="b"
+movimentoJogador numeroJogador=2 linhaOrigem=7 colunaOrigem="c" linhaDestino=6 colunaDestino="b"
 
 finalizarESalvarJogo idPartida="PT-01"
 
 continuarPartida id="PT-02"
 
-expect "true" isOcupada idPartida="PT-02" linha=5 coluna="b"
+expect "true" isOcupada idPartida="PT-02" linha=2 coluna="b"
 
-expect "true" isOcupada idPartida="PT-02" linha=4 coluna="g"
+expect "true" isOcupada idPartida="PT-02" linha=6 coluna="b"
 
-expect "false" isOcupada idPartida="PT-02" linha=6 coluna="a"
+expect "false" isOcupada idPartida="PT-02" linha=1 coluna="a"
 
-expect "false" isOcupada idPartida="PT-02" linha=3 coluna="f"
+expect "false" isOcupada idPartida="PT-02" linha=7 coluna="c"
 
 finalizarESalvarJogo idPartida="PT-02"
 
