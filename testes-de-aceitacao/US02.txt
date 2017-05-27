@@ -24,7 +24,6 @@ iniciarPartida id="p02" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jo
 
 encerrarPartidaSemSalvar id="p02"
 
-
 #Partidas invalidas:
 #Jogadores sem nome
 
