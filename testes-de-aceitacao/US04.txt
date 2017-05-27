@@ -7,7 +7,7 @@ criarTabuleiro idTabuleiro="TB-01" dimensao=8
 #Nao permite sopro
 iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" jogadorPedraBranca=1 regraMovimento="regraMovimento1" permiteSopro="false"
 
-movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="c " linhaDestino=4 colunaDestino="d"
+movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="c" linhaDestino=4 colunaDestino="d"
 
 movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="f" linhaDestino=5 colunaDestino="g"
 

@@ -20,7 +20,7 @@ expectError "Casas subsequentes nao podem ser ocupadas" movimentoJogador numeroJ
 
 expectError "A casa de origem esta vazia" movimentoJogador numeroJogador=1 linhaOrigem=2 colunaOrigem="a" linhaDestino=3 colunaDestino="b"
 
-expectError "A casa de destino nao existe neste tabuleiro" movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="h" linhaDestino=4 colunaDestino=9
+expectError "A casa de destino nao existe neste tabuleiro" movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="g" linhaDestino=4 colunaDestino="h"
 
 expectError "Jogador, ainda nao e sua vez" movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="b" linhaDestino=5 colunaDestino="c"
 

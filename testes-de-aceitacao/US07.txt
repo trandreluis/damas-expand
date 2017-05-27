@@ -69,7 +69,7 @@ posicionarPeca idPartida="PT-04" cor=2 linha=4 coluna="g"
 
 posicionarPeca idPartida="PT-04" cor=2 linha=6 coluna="e"
 
-setVez idPartida="PT-04" jogador=2
+setVez idPartida="PT-04" jogador=1
 
 #Jogador 1 vence
 movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="h" linhaDestino=5 colunaDestino="f"
