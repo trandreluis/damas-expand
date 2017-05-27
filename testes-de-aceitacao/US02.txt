@@ -41,7 +41,7 @@ expectError "regra de movimentacao nao definida" iniciarPartida id="p03" idTabul
 #regraMovimento de movimentacao invalida
 expectError "regra de movimentacao invalida" iniciarPartida id="p03" idTabuleiro="TB-01" jogador1="Carlos" jogador2="Luis" jogadorPedraBranca=1 regraMovimento="regraMovimento4" permiteSopro="false"
 
-expectError "regra de movimentacao invalida" iniciarPartida id="p03" idTabuleiro="TB-01" jogador1="Carlos" jogador2="Luis" jogadorPedraBranca=1 regraMovimento="" permiteSopro="false"
+expectError "regra de movimentacao nao definida" iniciarPartida id="p03" idTabuleiro="TB-01" jogador1="Carlos" jogador2="Luis" jogadorPedraBranca=1 regraMovimento="" permiteSopro="false"
 
 #Posicionamento de pedras
 
