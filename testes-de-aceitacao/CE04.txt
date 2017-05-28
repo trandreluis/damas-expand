@@ -30,7 +30,7 @@ movimentoJogador numeroJogador=2 linhaOrigem=4 colunaOrigem="g" linhaDestino=3 c
 
 movimentoJogador numeroJogador=1 linhaOrigem=4 colunaOrigem="a" linhaDestino=3 colunaDestino="b"
 
-movimentoJogador numeroJogador=2 linhaOrigem=4 colunaOrigem="f" linhaDestino=5 colunaDestino="g"
+movimentoJogador numeroJogador=2 linhaOrigem=3 colunaOrigem="f" linhaDestino=5 colunaDestino="g"
 
 #Finaliza o jogo
 
@@ -39,4 +39,3 @@ expect "Empate" getVencedorPartida id="p01"
 zerarJogo
 
 quit
-
