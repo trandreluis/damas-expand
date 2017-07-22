@@ -6,31 +6,31 @@ iniciarPartida id="PT-01" idTabuleiro="TB-01" jogador1="Pedro" jogador2="Maria" 
 
 ativarPosicionamentoManual idPartida="PT-01"
 
-posicionarPeca idPartida="PT-01" cor=1 linha=8 coluna="a"
+posicionarPeca idPartida="PT-01" cor=1 linha=1 coluna="a"
 
-posicionarPeca idPartida="PT-01" cor=2 linha=1 coluna="d"
+posicionarPeca idPartida="PT-01" cor=2 linha=8 coluna="b"
 
 setVez idPartida="PT-01" jogador=1
 
-movimentoJogador numeroJogador=1 linhaOrigem=8 colunaOrigem="a" linhaDestino=7 colunaDestino="b"
+movimentoJogador numeroJogador=1 linhaOrigem=1 colunaOrigem="a" linhaDestino=2 colunaDestino="b"
 
-movimentoJogador numeroJogador=2 linhaOrigem=1 colunaOrigem="d" linhaDestino=2 colunaDestino="e"
+movimentoJogador numeroJogador=2 linhaOrigem=8 colunaOrigem="b" linhaDestino=7 colunaDestino="a"
 
-movimentoJogador numeroJogador=1 linhaOrigem=7 colunaOrigem="b" linhaDestino=6 colunaDestino="a"
+movimentoJogador numeroJogador=1 linhaOrigem=2 colunaOrigem="b" linhaDestino=3 colunaDestino="a"
 
-movimentoJogador numeroJogador=2 linhaOrigem=2 colunaOrigem="e" linhaDestino=3 colunaDestino="f"
+movimentoJogador numeroJogador=2 linhaOrigem=7 colunaOrigem="a" linhaDestino=6 colunaDestino="b"
 
-movimentoJogador numeroJogador=1 linhaOrigem=6 colunaOrigem="a" linhaDestino=5 colunaDestino="b"
+movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="a" linhaDestino=4 colunaDestino="b"
 
-movimentoJogador numeroJogador=2 linhaOrigem=3 colunaOrigem="f" linhaDestino=4 colunaDestino="g"
+movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="b" linhaDestino=5 colunaDestino="a"
 
-movimentoJogador numeroJogador=1 linhaOrigem=5 colunaOrigem="b" linhaDestino=4 colunaDestino="a"
+movimentoJogador numeroJogador=1 linhaOrigem=4 colunaOrigem="b" linhaDestino=5 colunaDestino="c"
 
-movimentoJogador numeroJogador=2 linhaOrigem=4 colunaOrigem="g" linhaDestino=3 colunaDestino="f"
+movimentoJogador numeroJogador=2 linhaOrigem=5 colunaOrigem="a" linhaDestino=4 colunaDestino="b"
 
-movimentoJogador numeroJogador=1 linhaOrigem=4 colunaOrigem="a" linhaDestino=3 colunaDestino="b"
+movimentoJogador numeroJogador=1 linhaOrigem=5 colunaOrigem="c" linhaDestino=6 colunaDestino="b"
 
-movimentoJogador numeroJogador=2 linhaOrigem=3 colunaOrigem="f" linhaDestino=5 colunaDestino="g"
+movimentoJogador numeroJogador=2 linhaOrigem=4 colunaOrigem="b" linhaDestino=5 colunaDestino="a"
 
 #Finaliza o jogo
 
