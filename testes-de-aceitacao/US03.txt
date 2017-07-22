@@ -1,3 +1,4 @@
+﻿
 #User Story 03 - Regras de movimentacao
 
 zerarJogo
@@ -19,8 +20,6 @@ expectError "Casa ocupada" movimentoJogador numeroJogador=1 linhaOrigem=3 coluna
 expectError "Casas subsequentes nao podem ser ocupadas" movimentoJogador numeroJogador=1 linhaOrigem=4 colunaOrigem="b" linhaDestino=4 colunaDestino="c"
 
 expectError "A casa de origem esta vazia" movimentoJogador numeroJogador=1 linhaOrigem=2 colunaOrigem="a" linhaDestino=3 colunaDestino="b"
-
-expectError "A casa de destino nao existe neste tabuleiro" movimentoJogador numeroJogador=1 linhaOrigem=3 colunaOrigem="g" linhaDestino=4 colunaDestino="h"
 
 expectError "Jogador, ainda nao e sua vez" movimentoJogador numeroJogador=2 linhaOrigem=6 colunaOrigem="b" linhaDestino=5 colunaDestino="c"
 
